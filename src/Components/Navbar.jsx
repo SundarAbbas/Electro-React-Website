@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  BiArrowBack,
-  BiChevronDown,
-  BiWorld,
-} from "react-icons/bi";
+import { BiArrowBack, BiChevronDown, BiWorld } from "react-icons/bi";
 import { CiSettings } from "react-icons/ci";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setSettingsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="flex justify-between items-center py-5 px-6  border-b border-gray-300">
       <div className="flex justify-center items-center gap-6">
@@ -141,23 +151,28 @@ const Navbar = () => {
       </div>
 
       {/* Settings Icon */}
-      <button className="group flex relative   lg:hidden sm:flex">
-        <CiSettings />{" "}
-        <div className="group-hover:block hidden  absolute pt-5 dropdown-menu right-0 ">
-          <div className="flex flex-col gap-2 w-36 rounded justify-center bg-slate-100 px-5 py-3">
-            <p className="flex items-center mx-auto  transition-all hover:scale-110">
-              {" "}
-              <BiWorld className="inline" /> EN
-            </p>
-            <p className=" transition-all hover:scale-110">Contact Sales</p>
-            <p className=" transition-all hover:scale-110">Login</p>
-            <button className=" text-sm flex w-auto  rounded-full  transition-all hover:scale-110">
-              Sign Up Free &#8594;
-            </button>
-          </div>
-        </div>
-      </button>
-
+      <button
+        ref={dropdownRef}
+          onClick={() => setSettingsOpen(!settingsOpen)}
+          className=" flex relative   lg:hidden sm:flex"
+        >
+          <CiSettings className="text-3xl" />{" "}
+          {settingsOpen && (
+            <div className="  absolute mt-10 dropdown-menu right-0 ">
+              <div className="flex flex-col gap-2 w-36 rounded justify-center bg-slate-100 px-5 py-3">
+                <p className="flex items-center mx-auto  transition-all hover:scale-110">
+                  {" "}
+                  <BiWorld className="inline" /> EN
+                </p>
+                <p className=" transition-all hover:scale-110">Contact Sales</p>
+                <p className=" transition-all hover:scale-110">Login</p>
+                <button className=" text-sm flex w-auto  rounded-full  transition-all hover:scale-110">
+                  Sign Up Free &#8594;
+                </button>
+              </div>
+            </div>
+          )}
+        </button>
       {/* Menu Icon */}
       <button
         className="md:hidden text-2xl"
