@@ -28,7 +28,7 @@ const Hero = () => {
     <div className="px-6 py-4 mt-10 flex justify-center gap-6 items-center flex-col lg:flex-row ">
       {/* Left */}
       <div className="flex flex-col justify-center lg:justify-start lg:items-start items-center gap-3 w-full lg:w-[40vw]">
-        <h1 className="text-black lg:mb-4 text-3xl lg:text-6xl font-bold">
+        <h1 className="text-black lg:mb-4 text-xl lg:text-6xl font-bold">
           Take Ideas from better to best
         </h1>
         <p className="text-xs lg:text-lg lg:mb-5">
