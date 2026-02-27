@@ -1,5 +1,5 @@
-import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
 import Solutions from "./Components/Solutions";
 import { Routes, Route , Router} from "react-router-dom";
 
