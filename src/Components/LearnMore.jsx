@@ -21,16 +21,16 @@ const LearnMore = () => {
         {/* <img src="/hero.png" alt="" /> */}
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-row justify-center items-center gap-7">
-            <div className="w-[110px] bg-[url('le1.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  h-[300px] rounded-full"></div>
-            <div className="w-[110px] bg-[url('le4.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  h-[300px] mb-20 rounded-full"></div>
-            <div className="w-[110px] bg-[url('le3.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  h-[300px] rounded-full"></div>
+            <div className="w-[110px] bg-[url('/le1.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  h-[300px] rounded-full"></div>
+            <div className="w-[110px] bg-[url('/le4.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  h-[300px] mb-20 rounded-full"></div>
+            <div className="w-[110px] bg-[url('/le3.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  h-[300px] rounded-full"></div>
           </div>
 
           <div className="flex relative flex-row justify-center items-center gap-0">
-            <div className="h-[50px] bg-[url('le2.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform absolute right-3 w-[50px] rounded-full "></div>
-            <div className="h-[50px] bg-[url('le6.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  absolute w-[50px]  rounded-full "></div>
-            <div className="h-[50px] bg-[url('le5.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform absolute left-3 w-[50px] rounded-full "></div>
-            <div className="h-[50px] border-2 bg-white border-gray-600 hover:-translate-y-4 transition-transform absolute left-12 w-[50px] rounded-full flex justify-center items-center ">+98</div>
+            <div className="h-[50px] bg-[url('/le2.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform absolute right-3 w-[50px] rounded-full "></div>
+            <div className="h-[50px] bg-[url('/le6.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform  absolute w-[50px]  rounded-full "></div>
+            <div className="h-[50px] bg-[url('/le5.jpg')] bg-center bg-cover hover:-translate-y-4 transition-transform absolute left-3 w-[50px] rounded-full "></div>
+            <div className="h-[50px] border-2 /bg-white border-gray-600 hover:-translate-y-4 transition-transform absolute left-12 w-[50px] rounded-full flex justify-center items-center ">+98</div>
           </div>
         </div>
       </div>
