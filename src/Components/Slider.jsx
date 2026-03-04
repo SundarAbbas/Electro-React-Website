@@ -29,7 +29,7 @@ const Slider = ({ images, currentIndex, setCurrentIndex }) => {
             src={image.src}
             alt={image.alt}
             onClick={() => setCurrentIndex(index)}
-            className={`w-24 h-16 object-cover rounded-lg cursor-pointer transition-all duration-300 
+            className={`w-15 lg:w-24 h-10 lg:h-15 object-cover rounded-lg cursor-pointer transition-all duration-300 
               ${currentIndex === index 
                 ? "ring-4 ring-blue-600 scale-105" 
                 : "opacity-60 hover:opacity-100"

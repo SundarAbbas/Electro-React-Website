@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="lg:w-6xl mx-auto">
+    <div className="w-full lg:w-6xl mx-auto">
       <div className="px-6 py-4 mt-10 lg:mt-20 flex flex-col justify-center items-center ">
         <div className="lg:w-2xl w-full relative ">
           <h1 className="bg-yellow-400 inline -top-6 absolute right-0  uppercase transition-transform rotate-15 text-xs rounded-lg py-1 px-2 font-semibold">
